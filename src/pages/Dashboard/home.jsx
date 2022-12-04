@@ -1,17 +1,46 @@
 import React from 'react'
-import "../../styles/home.css"
+import { Link } from 'react-router-dom'
+import '../../styles/home.css'
+
 const Home = () => {
     return (
-        <>
-            
-            <div className="div1">
-                <div className="div2">Bienvenido a la pagina principal</div>
-                <div className="div3">
-                    <img src="data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e" alt="" width={150} />
+        <div className='home'>
+            <div className='home__main'>
+                <div className="home__content">
+                    <h2>PAGINA PRINCIPAL DE LA LISTA POKEMON </h2>
+
+                    <div>
+                    <img alt='' src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c31f.png" width="100" height="100" />
+                    </div>
                 </div>
-                <div className="div4">To start touch the icon located in the upper-left corner, then choose one of the options</div>
+                <div className="home__links">
+                    <ul>                   
+                        <Link to={'/about'}>
+                            <li>
+                                <h3><b>pokeApi</b></h3>
+                                <p>
+                                    Accede a la lista de pokemones
+                                </p>
+                            </li>
+                        </Link>
+                        <Link to={'/admin'}>
+                            <li>
+                                <h3><b>clientePokemon</b></h3>
+                                <p>
+                                    Clientes registrados de los pokemones
+                                </p>
+                            </li>
+                        </Link>
+                    </ul>
+                </div>
             </div>
-        </>
+            <aside className="home__aside">
+                <h3>PokemonDongo</h3>
+                <p>
+                    pagina de los pokemones
+                </p>
+            </aside>
+        </div>
     )
 }
 
